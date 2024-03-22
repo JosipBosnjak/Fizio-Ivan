@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Upper navbar */
+
+.upper-navbar {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.upper-nav-left,
+.upper-nav-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.phone-num-icon,
+.email-icon {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-num-icon {
+  margin-left: 0.6rem;
+}
+
+.phone-num,
+.email {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.youtube-icon,
+.facebook-icon,
+.instagram-icon {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#yt-icon {
+  height: 2.6rem;
+  width: 2.4rem;
+}
+
+.p-text {
+  color: rgb(74, 180, 215);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#p-text-gmail {
+  padding-bottom: 0.08rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .upper-navbar {
+    display: none;
+  }
+}
+
+/* Navbar */
+
+.navbar-bottom li,
+.navbar-bottom a,
+.navbar-bottom button {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-bottom {
+  height: 5rem;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(60, 150, 214),
+    rgb(12, 79, 150)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navbar-items {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  padding: 0;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.nav__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.nav__links li:first-child,
+.nav__links li:nth-child(2) {
+  margin-right: 10rem;
+}
+
+.nav__links li {
+  display: inline-block;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #4ec3e0;
+}
+
+button {
+  padding: 0.6rem 2rem;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.collapsed-menu {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .nav__links {
+    display: none;
+  }
+
+  .collapsed-menu {
+    display: block;
+  }
+
+  .collapsed-nav__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background-color: rgba(0, 136, 169, 1);
+  }
+
+  .collapsed-nav__links li {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .menu-toggle:hover {
+    color: #cfebf3;
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
+  }
+
+  .expanded {
+    display: block;
+  }
+}
+
+/* Top section---------------------- */
+
+.container {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.top-section {
+  position: relative;
+}
+
+.top-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/fizio-top2.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+.heading-text {
+  color: rgb(254, 236, 226);
+  font-size: 5vw;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.p-fizioterapija {
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+  width: 100%;
+}
+
+.p-fizioterapija {
+  opacity: 0;
+  animation: flyIn 1.6s ease forwards;
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* About section--------------- */
+
+.about-section-between {
+  position: relative;
+  padding: 0 2rem 0 2rem;
+}
+
+.about-section-between::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/about-bckg-pic1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+  z-index: -1;
+}
+
+.about-section-elements {
+  width: 100%;
+  height: 100%;
+}
+
+.about-title {
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 3vw;
+  text-decoration: underline;
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
+}
+
+.about-title.show {
+  transform: translateX(0);
+}
+
+.slide-in {
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
+  font-size: 3vw;
+}
+
+.slide-in.show {
+  transform: translateX(0);
+}
+
+.about-frst-part,
+.about-scnd-part {
+  display: flex;
+}
+
+.about-frst-part,
+.about-scnd-part {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.8rem rgb(255, 255, 255, 0.7);
+}
+
+.about-text {
+  color: rgb(255, 255, 255);
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#about-text-1 {
+  max-width: 80%;
+}
+
+#about-text-2 {
+  padding-left: 1.5rem;
+}
+
+.about-text-3 {
+  color: white;
+  height: 100%;
+  font-size: 1vw;
+  text-align: justify;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-decoration: underline;
+}
+
+/*
+@media screen and (max-width: 1400px) {
+  .about-section-between {
+    
+    font-size: 0.5m;
+  }
+  .about-img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 1rem;
+  }
+  .about-frst-part {
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+
+  .about-scnd-part {
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    padding-left: 1rem;
+    padding-right: 2rem;
+    text-align: justify;
+  }
+}
+*/
+/* Pricing section ------------------------- */
+
+.pricing-section {
+  width: 100%;
+  height: 100%;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+/* table for pricing ---------- */
+
+#table-title {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 3.5rem;
+  color: #3e5ae5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  border: solid 0.5rem #132378;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  height: 5rem;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #3e5ae5;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+
+td {
+  color: white;
+  font-weight: 700;
+}
+
+.table-row {
+  background-color: rgb(40, 95, 224);
+}
+
+.price-text {
+  color: #132378;
+  font-weight: 600;
+  padding: 2rem 0 2rem 0;
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .table-row {
+    display: block;
+  }
+
+  .table-row th,
+  .table-row td {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* diagnosis section ------------------------ */
+.diagnosis-section {
+  position: relative;
+}
+
+.diagnosis-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/fizio-bottom.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+
+  z-index: -1;
+}
+
+.diagnosis-elements {
+  width: 100%;
+  height: 100%;
+}
+
+.diagnosis-text {
+  color: white;
+}
